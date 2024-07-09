@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Rozitta</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="shortcut icon" href="assets/img/fav.png" title="Favicon" sizes="16x16">
+    <link rel="stylesheet" href="../common/assets/css/lib/bootstrap.min.css">
+    <link rel="stylesheet" href="../common/assets/css/lib/bootstrap.rtl.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../common/assets/css/lib/all.css">
+    <link rel="stylesheet" href="../common/assets/css/lib/animate.css">
+    <link rel="stylesheet" href="../common/assets/css/lib/jquery.fancybox.css">
+    <link rel="stylesheet" href="../common/assets/css/lib/lity.css">
+    <link rel="stylesheet" href="../common/assets/css/lib/swiper8.min.css">
+    <link rel="stylesheet" href="../common/assets/css/common_style.css">
+    <link rel="stylesheet" href="../inner-pages/assets/css/home_1_style.css">
+    <link rel="stylesheet" href="assets/css/inner_pages.css">
+    <script>
+        window.ga = window.ga || function() {
+          (ga.q = ga.q || []).push(arguments)
+        };
+        ga.l = +new Date;
+        ga('create', 'UA-105392568-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+</head>
+<style>
+    .play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: #fff;
+  font-size: 24px;
+  transition: background-color 0.3s ease;
+  z-index: 100;
+}
+
+.play-btn :hover {
+  background-color: rgba(155, 65, 65, 0.7);
+}
+</style>
+<body class="home-st1 services-page-st1">
+
+    <canvas class="banner_canvas" id="canvas_banner"></canvas>
+
+    <!-- ====== Start Loading ====== -->
+
+    <div class="loader-wrap">
+        <svg viewBox="0 0 1000 1000" preserveAspectRatio="none" width="100%" height="100%">
+            <defs>
+              <linearGradient id="path-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" style="stop-color: #000" />
+                <stop offset="100%" style="stop-color: #555" />
+              </linearGradient>
+            </defs>
+            <path id="svg" d="M0,1005S175,995,500,995s500,5,500,5V0H0Z" fill="url(#path-gradient)"></path>
+        </svg>
+
+        <div class="loader-wrap-heading">
+            <div class="load-logo cont mb-50">
+                <img src="assets/img/logo.svg" alt="" class="">
+            </div>
+            <div class="load-text">
+                <span>R</span>
+                <span>O</span>
+                <span>Z</span>
+                <span>I</span>
+                <span>T</span>
+                <span>T</span>
+                <span>A</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="byd" id="top"></div>
+    <!--  Start fixed menu  -->
+    <div class="fixed-menu">
+        <div class="food-slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <a href="portfolio_single.html" class="dish-card">
+                        <div class="img">
+                            <img src="assets/img/menu_dishes/chicken.png" alt="">
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="portfolio_single.html" class="dish-card">
+                        <div class="img">
+                            <img src="assets/img/menu_dishes/chicken_peppers.png" alt="">
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="portfolio_single.html" class="dish-card">
+                        <div class="img">
+                            <img src="assets/img/menu_dishes/meat.png" alt="">
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="portfolio_single.html" class="dish-card">
+                        <div class="img">
+                            <img src="assets/img/menu_dishes/nachos_guacamole.png" alt="">
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="portfolio_single.html" class="dish-card">
+                        <div class="img">
+                            <img src="assets/img/menu_dishes/pasta.png" alt="">
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="portfolio_single.html" class="dish-card">
+                        <div class="img">
+                            <img src="assets/img/menu_dishes/salad.png" alt="">
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="food-text-slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="text-card">
+                        <h2> chicken </h2>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="text-card">
+                        <h2> chicken peppers </h2>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="text-card">
+                        <h2> meat </h2>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="text-card">
+                        <h2> nachos guacamole </h2>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="text-card">
+                        <h2> pasta </h2>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="text-card">
+                        <h2> salads </h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+        <div class="circle"></div>
+        <span class="clss"><i class="fas fa-times-circle"></i></span>
+    </div>
+    <!--  End fixed menu  -->
+
+
+    <div id="scrollsmoother-container">
+
+
+        <!--  Start navbar  -->
+        <div class="tc-topNav-st1">
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <div class="col-lg-4">
+                        <p class="welcome"> Welcome to our Rozitta Cafe </p>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="logo th-50 my-4 my-lg-0">
+                            <img src="assets/img/logo.svg" alt="" class="img-contain">
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="social-links text-center text-lg-end">
+                            <a href="services.html#"> <i class="fab fa-facebook-f"></i> </a>
+                            <a href="services.html#"> <i class="fab fa-x-twitter"></i> </a>
+                            <a href="services.html#"> <i class="fab fa-instagram"></i> </a>
+                            <a href="services.html#"> <i class="fab fa-behance"></i> </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ------------- -->
+        <nav class="navbar navbar-expand-lg navbar-dark tc-navbar-st1">
+            <div class="container-fluid">
+                
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse order-last order-lg-0" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto sub-font">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/index.html">Home</a>
+                        </li>
+                        
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="index.html#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                About
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="../inner-pages/about.html"> About Us</a></li>
+                                <li><a class="dropdown-item" href="../inner-pages/services.html">services </a></li>
+                                <li><a class="dropdown-item" href="../inner-pages/faq.html"> faq </a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/menu.html">Menu</a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link" href="/blog.html">Blog</a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link" href="../inner-pages/contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <a href="../inner-pages/contact.html" class="butn bg-red1 text-white rounded-pill size-1 d-none d-lg-inline-block"> <span> Book a Table + </span> </a>
+            </div>
+        </nav>
+        <header class="tc-inner-header-st1">
+            <div class="container">
+                <div class="title">
+                    <h2 class="fsz-50 mb-30"> Our Services </h2>
+                    <div class="links"> <a href="/index.html"> Home / </a> <a href="services.html#"> Our Services </a> </div>
+                </div>
+            </div>
+        </header>
+
+        <main>
+
+
+            <!--  Start services  -->
+            <section class="tc-services-st6">
+                <div class="container">
+                    <div class="services-slider wow fadeInUp slow" data-wow-delay="0.4s">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <a href="services.html#" class="service-card">
+                                    <h6 class="fsz-24 lh-5 pe-lg-5"> Fresh Brewed White Coffee </h6>
+                                    <div class="img">
+                                        <img src="assets/img/services/1.jpg" alt="" class="img-cover">
+                                    </div>
+                                    <div class="more-wrapper">
+                                        
+                                        <div class="icon icon-50">
+                                            <img src="https://uithemez.com/i/restfolio/inner-pages/assets/img/icons/sr1.svg" alt="">
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="services.html#" class="service-card">
+                                    <h6 class="fsz-24 lh-5 pe-lg-5"> Fresh coffee steams on Chocolate flavor  </h6>
+                                    <div class="img">
+                                        <img src="assets/img/services/2.jpg" alt="" class="img-cover">
+                                    </div>
+                                    <div class="more-wrapper">
+                                        
+                                        <div class="icon icon-50">
+                                            <img src="assets/img/icons/sr2.svg" alt="">
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="services.html#" class="service-card">
+                                    <h6 class="fsz-24 lh-5 pe-lg-5"> Fresh beans top view cup Coffee </h6>
+                                    <div class="img">
+                                        <img src="assets/img/services/3.jpg" alt="" class="img-cover">
+                                    </div>
+                                    <div class="more-wrapper">
+                                        
+                                        <div class="icon icon-50">
+                                            <img src="assets/img/icons/sr3.svg" alt="">
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="services.html#" class="service-card">
+                                    <h6 class="fsz-24 lh-5 pe-lg-5"> Vertical of hot coffee with waffles </h6>
+                                    <div class="img">
+                                        <img src="assets/img/services/4.jpg" alt="" class="img-cover">
+                                    </div>
+                                    <div class="more-wrapper">
+                                        
+                                        <div class="icon icon-50">
+                                            <img src="assets/img/icons/sr4.svg" alt="">
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="slider-controls df-center">
+                            <div class="swiper-prev"> <i class="fal fa-long-arrow-left"></i> </div>
+                            <div class="swiper-pagination swiper-pagination-light"></div>
+                            <div class="swiper-next"> <i class="fal fa-long-arrow-right"></i> </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--  End services  -->
+
+
+            <!--  Start about  -->
+            <section class="tc-about-st6">
+                <div class="container">
+                    <div class="content-info">
+                        <div class="row justify-content-center align-items-end gx-0">
+                            <div class="col-lg-4">
+                                <div class="info wow fadeInUp slow" data-wow-delay="0.2s">
+                                    <h2 class="fsz-50 pe-lg-5 mb-20"> Explore The History Of the bakery. </h2>
+                                    <div class="text fsz-16"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam mi sem, tristique vel blandit sed, varius id tellus. Pellentesque pretium bibendum velit, at interdum libero cursus sit amet. Fusce ac faucibus elit. </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 offset-lg-1">
+                                <ul class="icon-list mt-4 mt-lg-0 wow fadeInUp slow" data-wow-delay="0.4s">
+                                    <li> <span class="icon"> <img src="assets/img/icons/1.svg" alt=""> </span> <span class="txt"> Natural Organic Product </span> </li>
+                                    <li> <span class="icon"> <img src="assets/img/icons/2.svg" alt=""> </span> <span class="txt"> Packaging Design </span> </li>
+                                    <li> <span class="icon"> <img src="assets/img/icons/3.svg" alt=""> </span> <span class="txt"> French Bakery Food </span> </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="video-card wow fadeInUp slow" data-wow-delay="0.2s">
+                            <img src="assets/img/video.jpg" alt="" class="img-cover">
+                            <a href="https://www.youtube.com/embed/wN4TvnFtcBs" class="play-btn" data-lity="video">
+                                &#x25BA; <!-- Unicode for play icon -->
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <h2 class="visitors"> <div class="cont"> <span class="txt"> Visitors </span> <span class="num"> 95k </span> </div> </h2>
+                <img src="https://uithemez.com/i/restfolio/inner-pages/assets/img/vec3.png" alt="" class="vec2">
+                <div class="lines"><span></span><span></span><span></span><span></span></div>
+            </section>
+            <!--  End about  -->
+
+
+            <div class="cir-wrapper-st5">
+                <a href="services.html#" class="rotate-box" data-speed="1" data-lag="0.4">
+                    <div class="rotate-circle fsz-30 rotate-text d-inline-block text-uppercase">
+                        <svg class="textcircle" viewBox="0 0 500 500">
+                            <defs>
+                                <path id="textcircle"
+                                    d="M250,400 a150,150 0 0,1 0,-300a150,150 0 0,1 0,300Z">
+                                </path>
+                            </defs>
+                            <text>
+                                <textPath xlink:href="#textcircle" textLength="900"> backery cafe corner Rozitta </textPath>
+                            </text>
+                        </svg>
+                    </div>
+                    <span class="icon"> <img src="assets/img/rotate_icon.svg" alt=""> </span>
+                </a>
+            </div>
+
+
+            <!--  Start restaurant  -->
+            <section class="tc-restaurant-st1">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-7">
+                            <div class="img th-550 wow fadeIn slow" data-wow-delay="0.2s">
+                                <img src="assets/img/res1.jpg" alt="" class="img-cover">
+                            </div>
+                            <div class="info pt-40 col-lg-9 wow fadeIn slow" data-wow-delay="0.4s">
+                                <h2 class="fsz-50 mb-20"> We Create Food in The best Cafe in the city </h2>
+                                <p class="fsz-16"> Praesent dignissim, t a gravida dignissim, purus tortor faucibus neque, aliquam vulputate enim ipsum non turpis. Phasellus blandit purus sed fermentum vehicula. Cras fermentum est sit amet. </p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 offset-lg-1 wow fadeIn slow" data-wow-delay="0.6s">
+                            <p class="fsz-16 text-white offset-lg-2 mb-50"> Praesent dignissim, turpis a gravida dignissim, purus tortor faucibus neque, aliquam vulputate enim ipsum non turpis. Phasellus blandit purus sed fermentum vehicula Cras fermentum. </p>
+                            <div class="img th-650">
+                                <img src="assets/img/res2.jpg" alt="" class="img-cover">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <img src="assets/img/vec4.svg" alt="" class="vec3">
+            </section>
+            <!--  End restaurant  -->
+
+
+            <!--  Start services  -->
+            <section class="tc-bg-services-st6 pt-120">
+                <div class="container">
+                    <div class="section-head-st1 text-center col-lg-6 mx-auto mt-20 mb-50 wow fadeIn slow" data-wow-delay="0.2s">
+                        <div class="icon th-50 mb-20">
+                            <img src="assets/img/vec2.svg" alt="" class="img-contain">
+                        </div>
+                        <h2 class="fsz-50 mb-20"> Why Choose Us </h2>
+                        <div class="text fsz-16"> Proin at lorem justo. Sed maximus risus hendrerit ipsum sodales, vel consequat dui ultrices. Vestibulum ante ipsum primis in faucibus orci luctus. </div>
+                    </div>
+                    <div class="cards">
+                        <div class="row gx-0">
+                            <div class="col-lg-3">
+                                <a href="services.html#" class="service-card" data-tab="tab-1">
+                                    <div class="icon">
+                                        <img src="assets/img/icons/s1.svg" alt="">
+                                    </div>
+                                    <h5 class="fsz-30 mb-20"> Fresh Product </h5>
+                                    <div class="text fsz-16"> Ligula dapibus sem sagittis, eu efficitur tellus malesuada. In hac habitasse platea. </div>
+                                    <span class="more-btn sub-font"> See more </span>
+                                </a>
+                            </div>
+                            <div class="col-lg-3">
+                                <a href="services.html#" class="service-card" data-tab="tab-2">
+                                    <div class="icon">
+                                        <img src="assets/img/icons/s2.svg" alt="">
+                                    </div>
+                                    <h5 class="fsz-30 mb-20"> Skilled Chefs </h5>
+                                    <div class="text fsz-16"> Ligula dapibus sem sagittis, eu efficitur tellus malesuada. In hac habitasse platea. </div>
+                                    <span class="more-btn sub-font"> See more </span>
+                                </a>
+                            </div>
+                            <div class="col-lg-3">
+                                <a href="services.html#" class="service-card" data-tab="tab-3">
+                                    <div class="icon">
+                                        <img src="assets/img/icons/s3.svg" alt="">
+                                    </div>
+                                    <h5 class="fsz-30 mb-20"> Drinks and Wines </h5>
+                                    <div class="text fsz-16"> Ligula dapibus sem sagittis, eu efficitur tellus malesuada. In hac habitasse platea. </div>
+                                    <span class="more-btn sub-font"> See more </span>
+                                </a>
+                            </div>
+                            <div class="col-lg-3">
+                                <a href="services.html#" class="service-card" data-tab="tab-4">
+                                    <div class="icon">
+                                        <img src="assets/img/icons/s4.svg" alt="">
+                                    </div>
+                                    <h5 class="fsz-30 mb-20"> Vegan Cuisine </h5>
+                                    <div class="text fsz-16"> Ligula dapibus sem sagittis, eu efficitur tellus malesuada. In hac habitasse platea. </div>
+                                    <span class="more-btn sub-font"> See more </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="glry-img">
+                    <img id="tab-1" src="assets/img/ser_bg2.jpg" alt="" class="tab-img current">
+                    <img id="tab-2" src="assets/img/ser_bg1.jpg" alt="" class="tab-img">
+                    <img id="tab-3" src="assets/img/ser_bg3.jpg" alt="" class="tab-img">
+                    <img id="tab-4" src="assets/img/ser_bg4.jpg" alt="" class="tab-img">
+                </div>
+            </section>
+            
+            <!--  End testimonials  -->
+
+
+            <!--  Start instagram  -->
+            <section class="tc-instagram-st1 mt-150">
+                <div class="cards wow fadeIn slow" data-wow-delay="0.2s">
+                    <div class="row gx-0 gx-lg-4">
+                        <div class="col-lg-3 col-6">
+                            <a href="services.html#" class="img">
+                                <img src="assets/img/insta/1.jpg" alt="" class="img-cover">
+                                <span class="icon"> <i class="fab fa-instagram"></i> </span>
+                            </a>
+                        </div>
+                        <div class="col-lg-3 col-6">
+                            <a href="services.html#" class="img">
+                                <img src="assets/img/insta/2.jpg" alt="" class="img-cover">
+                                <span class="icon"> <i class="fab fa-instagram"></i> </span>
+                            </a>
+                        </div>
+                        <div class="col-lg-3 col-6">
+                            <a href="services.html#" class="img">
+                                <img src="assets/img/insta/3.jpg" alt="" class="img-cover">
+                                <span class="icon"> <i class="fab fa-instagram"></i> </span>
+                            </a>
+                        </div>
+                        <div class="col-lg-3 col-6">
+                            <a href="services.html#" class="img">
+                                <img src="assets/img/insta/4.jpg" alt="" class="img-cover">
+                                <span class="icon"> <i class="fab fa-instagram"></i> </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--  End instagram  -->
+
+
+        </main>
+        <!--End-Contents-->
+
+        <!--  Start footer  -->
+        <footer class="tc-footer-st1">
+            <div class="container">
+                <div class="foot-suscribe text-center">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <a href="services.html#" class="foot-logo th-50 mb-20">
+                                <img src="assets/img/logo.png" alt="">
+                            </a>
+                            <p class="fsz-16 px-lg-5 mx-lg-5"> Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis vel metus sit amet dolor finibus convallis. </p>
+                            <div class="from-group">
+                                <input type="text" class="form-control" placeholder="Enter your email address...">
+                                <a href="services.html#" class="butn bg-red1 text-white rounded-pill size-1"> <span> Subscribe Now + </span> </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <div class="row">
+                        <div class="col-lg-3">
+                            <div class="links-group">
+                                <h6 class="fsz-20 mb-30 mt-5 mt-lg-0"> Social </h6>
+                                <ul class="links">
+                                    <li> <a href="services.html#"> Facebook </a> </li>
+                                    <li> <a href="services.html#"> Twitter </a> </li>
+                                    <li> <a href="services.html#"> Instagram </a> </li>
+                                    <li> <a href="services.html#"> Pinterest </a> </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="links-group">
+                                <h6 class="fsz-20 mb-30 mt-5 mt-lg-0"> More Service </h6>
+                                <ul class="links">
+                                    <li> <a href="services.html#"> About us </a> </li>
+                                    <li> <a href="services.html#"> Case Studies </a> </li>
+                                    <li> <a href="services.html#"> Privacy Policy </a> </li>
+                                    <li> <a href="services.html#"> Contact us </a> </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="links-group">
+                                <h6 class="fsz-20 mb-30 mt-5 mt-lg-0"> Working Hours </h6>
+                                <ul class="links links-m0">
+                                    <li> <a href="services.html#"> SUNDAY TO TUESDAY </a> </li>
+                                    <li> <a href="services.html#" class="mb-30"> 7.00am – 6.00pm </a> </li>
+                                    <li> <a href="services.html#"> FRIDAY TO SATURDAY </a> </li>
+                                    <li> <a href="services.html#"> 8.00am – 6.00pm </a> </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="links-group">
+                                <h6 class="fsz-20 mb-30 mt-5 mt-lg-0"> Contact </h6>
+                                <ul class="links links-m0">
+                                    <li> <a href="services.html#" class="mb-30"> 785 15h Street - Sydney Harbor <br> Bridge of Sydney, #Australia. </a> </li>
+                                    <li> <a href="services.html#"> contact@resfolio.com </a> </li>
+                                    <li> <a href="services.html#"> +444 3322 111 00 </a> </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="foot">
+                    <p> <a href="services.html#" class="text-white"> NAMIK Development </a>© 2024. All Rights Reserved. </p>
+                </div>
+            </div>
+        </footer>
+        <!--  End footer  -->
+
+
+    </div>
+
+
+    <!--  Start to top button  -->
+    <!-- <a href="#" class="to_top" id="to_top">
+        <i class="fal fa-angle-up"></i>
+    </a> -->
+    <!--  End to top button  -->
+    <a href="#top" class="back-top-btn active" aria-label="back to top" data-back-top-btn>
+        <ion-icon name="chevron-up" aria-hidden="true"></ion-icon>
+      </a>
+      <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+      <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+   
+    <!--  request  -->
+    <script src="../common/assets/js/lib/jquery-3.0.0.min.js"></script>
+    <script src="../common/assets/js/lib/jquery-migrate-3.0.0.min.js"></script>
+    <script src="../common/assets/js/lib/bootstrap.bundle.min.js"></script>
+    <script src="../common/assets/js/lib/wow.min.js"></script>
+    <script src="../common/assets/js/lib/jquery.fancybox.js"></script>
+    <script src="../common/assets/js/lib/lity.js"></script>
+    <script src="../common/assets/js/lib/swiper8-bundle.min.js"></script>
+    <script src="../common/assets/js/lib/jquery.waypoints.min.js"></script>
+    <script src="../common/assets/js/lib/jquery.counterup.js"></script>
+    <script src="../common/assets/js/lib/smoke.js"></script>
+    <script src="../common/assets/js/lib/parallaxie.js"></script>
+    <!-- === Gsap === -->
+    <script src="../common/assets/js/gsap_lib/gsap.min.js"></script>
+    <script src="../common/assets/js/gsap_lib/ScrollSmoother.min.js"></script>
+    <script src="../common/assets/js/gsap_lib/ScrollTrigger.min.js"></script>
+    <script src="../common/assets/js/gsap_lib/SplitText.min.js"></script>
+    <!-- === common === -->
+    <script src="../common/assets/js/common_js.js"></script>
+
+    <!-- ===== home scripts ===== -->
+    <script src="assets/js/inner_pages.js"></script>
+    <script>
+        // Add smooth scroll functionality for older browsers
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+</body>
+
+</html>
